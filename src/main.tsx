@@ -7,7 +7,7 @@ import { Routes } from '@/routes/routes';
 import { store } from '@/store/store';
 import './index.css';
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ReduxProvider store={store}>
       <BrowserRouter>
