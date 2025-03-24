@@ -1,15 +1,15 @@
 import { lazy, Suspense } from 'react';
 import { RouteObject } from 'react-router';
-import { CounterPage } from '@/pages/CounterPage/CounterPage';
 
-const Home = lazy(() => import('../pages/home'));
+const HomePage = lazy(() => import('../pages/home'));
+const CounterPage = lazy(() => import('../pages/counter'));
 
 export const routesAll: RouteObject[] = [
   {
     index: true,
     element: (
       <Suspense fallback={<div>Loading...</div>}>
-        <Home />
+        <HomePage />
       </Suspense>
     ),
   },
